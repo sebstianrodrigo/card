@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Opening Card</title>
+   <style>
+      body{
+         background: #A8C556;
+         justify-content:center;
+         align-items:center;
+         display:flex;
+         font-family:Arial, Helvetica, sans-serif;
+         min-height:90vh;
+      }
+      .card{
+         position:relative;
+         width:300px;
+         height:400px;
+         border-radius:0px 10px 10px 0px;
+         background:#f4f4f4;
+         justify-content: center;
+         align-items: center;
+         display: flex;
+         perspective: 100em;
+         margin:25px;
+         box-shadow:30px 40px 40px rgba(0,0,0,0.2);
+      }
+      .cover{
+         position:absolute;
+         top:0px;
+         left:0px;
+         width:100%;
+         height:100%;
+         background: dodgerblue;
+         transform-style: preserve-3d;
+         transform-origin: left;
+         transition:transform 1s;
+         border-radius:0px 10px 10px 0px;
+         font-size:30px;
+         font-weight: bold;
+      }
+      .card:hover .cover{
+         transform:rotateY(-120deg);
+      }
+      .coverFront, .coverBack{
+         position:absolute;
+         width:100%;
+         height:100%;
+         justify-content: center;
+         align-items:center;
+         display: flex;
+      }
+      .coverFront{
+         background: #f4f4f4;
+         text-align: center;
+         border-radius: 0px 10px 10px 0px ;
+         color:#333;
+      }
+      .coverBack{
+         background: #E2ECC7;
+         border-radius: 10px 0px 0px 10px;
+         transform:rotateY(180deg);
+      }
+      .sh_img{
+         width:100px;
+      }
+      .sh_btn{
+         border:0px;
+         background: dodgerblue;
+         border-radius: 5px;
+         padding:10px 20px;
+         color:#fff;
+         margin-top:10px;
+      }
+   </style>
+</head>
+<body>
+   
+   <div class="card">
+      <div style="padding: 20px;text-align: center;font-size:12px;margin-top:-10px">
+         <h1>Congratulations!</h1>
+         <p style="text-align: left">
+            Lizzy,<br><br>
+
+            ¡Felicidades por tu primer auto! Es un gran logro y estoy muy orgulloso de la mujer en la que te estás convirtiendo. Estoy seguro de que este es solo el comienzo de muchos más logros en tu vida.<br><br>
+
+            Tu esfuerzo y dedicación estan dado sus frutos y estoy emocionado de ver lo que el futuro te depara. Espero que disfrutes mucho tu nuevo auto y que te lleve a muchas aventuras emocionantes.<br><br>
+
+            Sigue adelante con confianza y seguridad, estaré aquí para apoyarte.<br><br>
+
+            Con cariño,<br><br>
+            Sebas
+         </p>
+         
+      </div>
+      <div class="cover">
+         <div class="coverFront">
+            <div>
+               <h5>New Car</h5>
+               <img src="R.png" alt="" class="sh_img">
+            </div>
+         </div>
+         <div class="coverBack"></div>
+      </div>
+   </div>
+
+   
+</body>
+</html>
